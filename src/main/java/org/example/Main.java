@@ -4,17 +4,16 @@ public class Main {
 
 
     public static void main(String[] args) {
-
-        Node head = new Node(5);
-        Node tail = new Node(28);
-        Node nodeA = new Node(36);
-
-        SingleLinkedList singleLinklyList = new SingleLinkedList(head,tail);
-        singleLinklyList.insert(nodeA);
-        singleLinklyList.printList();
-        singleLinklyList.search(36);
-        singleLinklyList.delete(36);
-        singleLinklyList.printList();
+        Node node =  new Node(13);
+        Node nodeA =  new Node(34);
+        Node nodeB =  new Node(10);
+        Node nodeC =  new Node(18);
+        SingleLinkedList singleLinkedList = new SingleLinkedList();
+        singleLinkedList.insert(nodeB,0);
+        singleLinkedList.insert(nodeC,1);
+        System.out.println(singleLinkedList.size());
+        singleLinkedList.printList();
+        singleLinkedList.peakLast();
 
     }
 }
