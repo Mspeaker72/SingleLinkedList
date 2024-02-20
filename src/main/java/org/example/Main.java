@@ -11,9 +11,12 @@ public class Main {
         SingleLinkedList singleLinkedList = new SingleLinkedList();
         singleLinkedList.insert(nodeB,0);
         singleLinkedList.insert(nodeC,1);
+        singleLinkedList.insert(nodeA,0);
+        singleLinkedList.delete(0);
         System.out.println(singleLinkedList.size());
         singleLinkedList.printList();
         singleLinkedList.peakLast();
+        singleLinkedList.peakFirst();
 
     }
 }

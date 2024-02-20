@@ -1,70 +1,52 @@
-
 # Single Linked List Implementation
 
-This Java project provides a basic implementation of a single linked list. It includes a `SingleLinkedList` class that allows operations such as insertion, deletion, searching, and printing of elements in the linked list. Additionally, there's a `Node` class representing the individual elements (nodes) of the linked list.
+This is a Java implementation of a single linked list data structure.
 
-## `Node` Class
+## Overview
 
-The `Node` class represents an individual element (node) of the linked list. Each node contains an integer value (`data`) and a reference to the next node (`next`).
+The `SingleLinkedList` class provides methods to perform various operations on a single linked list, including:
 
-### Constructor
+- Creation of a single linked list with a specified head node or head and tail nodes.
+- Printing the elements of the linked list.
+- Checking if the linked list is empty.
+- Getting the size of the linked list.
+- Searching for a target value in the linked list and printing its index if found.
+- Inserting a node at the end of the linked list (append).
+- Inserting a node at a specified index in the linked list.
+- Deleting a node with a specified target value from the linked list.
+- Deleting a node at a specified index in the linked list.
+- Getting the value of the last node in the linked list.
+- Getting the value of the first node in the linked list.
 
-- `Node(int data)`: Initializes a new node with the specified integer value.
+## Time Complexity
 
-## `SingleLinkedList` Class
-
-The `SingleLinkedList` class implements a single linked list data structure. It includes methods to perform various operations on the linked list, such as insertion, deletion, searching, and printing.
-
-### Constructors
-
-- `SingleLinkedList(Node head)`: Constructs a single linked list with the specified head node.
-- `SingleLinkedList(Node head, Node tail)`: Constructs a single linked list with the specified head and tail nodes.
-
-### Methods
-
-- `printList()`: Prints the elements of the linked list.
-- `search(int target)`: Searches for a target value in the linked list and prints its index if found.
-- `insert(Node node)`: Inserts a node at the end of the linked list.
-- `delete(int target)`: Deletes a node with the specified target value from the linked list.
+- Insertion at the end of the list (append) takes constant time O(1).
+- Insertion at a specific index takes linear time O(n) because it requires traversing the list.
+- Deletion of a node with a specific target value or index also takes linear time O(n) due to traversal.
+- Other operations such as printing, checking emptiness, and getting size take linear time O(n) as they involve traversing the entire list.
 
 ## Usage
 
 To use the `SingleLinkedList` class, follow these steps:
 
-1. Create a new instance of the `SingleLinkedList` class, providing the necessary parameters.
-2. Use the provided methods (`printList()`, `search(int target)`, `insert(Node node)`, `delete(int target)`) to perform operations on the linked list.
+1. Create a new instance of the `SingleLinkedList` class.
+2. Use the provided methods to perform desired operations on the linked list.
 
 Example usage:
 
 ```java
-public class Main {
-    public static void main(String[] args) {
-        // Create nodes
-        Node node1 = new Node(10);
-        Node node2 = new Node(20);
-        
-        // Create a linked list with node1 as the head
-        SingleLinkedList linkedList = new SingleLinkedList(node1);
-        
-        // Insert node2 to the linked list
-        linkedList.insert(node2);
-        
-        // Print the linked list
-        linkedList.printList();
-        
-        // Search for a value in the linked list
-        linkedList.search(20);
-        
-        // Delete a node from the linked list
-        linkedList.delete(10);
-    }
-}
-```
+// Create a new empty linked list
+SingleLinkedList myList = new SingleLinkedList();
 
-## Future Improvements
+// Append nodes to the list
+myList.append(new Node(10));
+myList.append(new Node(20));
 
-- Encapsulation: Make the `data` and `next` fields in the `Node` class private and provide getter and setter methods for access.
-- Error Handling: Implement more robust error handling mechanisms, such as throwing exceptions for invalid operations.
-- Unit Tests: Write unit tests to ensure the correctness of the implementation.
-- Performance Optimization: Optimize the performance of the implementation, especially for large linked lists.
+// Print the list
+myList.printList();
 
+// Search for a value
+myList.search(20);
+
+// Delete a node
+myList.delete(10);

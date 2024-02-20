@@ -96,6 +96,7 @@ public class SingleLinkedList {
 
     /**
      * Inserts a node at the end of the linked list.
+     * Insertion takes O(1) constant time and search takes linear time O(n)
      *
      * @param node The node to be inserted.
      */
@@ -117,6 +118,11 @@ public class SingleLinkedList {
             Node start = this.head;
 
             if (index == 0) {
+                if(head!=null){
+                    Node temp = head;
+                    this.head = node;
+                    this.head.next = temp;
+                }
                 this.head = node;
                 return;
             }
@@ -132,6 +138,7 @@ public class SingleLinkedList {
             if (index == size() - 1) {
                 this.tail = node;
             }
+
         }
     }
 
@@ -140,7 +147,7 @@ public class SingleLinkedList {
      *
      * @param target The target value to delete from the linked list.
      */
-    public void delete(int target) {
+    public void remove(int target) {
         if (head == null) {
             System.out.println("List is empty. Nothing to delete.");
             return;
@@ -175,11 +182,57 @@ public class SingleLinkedList {
         System.out.println("Node with value " + target + " deleted from the linked list.");
     }
 
+    public void delete(int index){
+
+        if(index> size()-1){
+            System.out.println("index not present");
+            return;
+        }
+
+        if(index==0){
+            head = head.next;
+        }
+
+        else{
+
+            Node start = head;
+            int count = 0;
+
+            while (count < index - 1) {
+                count++;
+                start = start.next;
+            }
+
+            Node temp = start.next;
+            start.next = temp.next;
+
+
+            Node last = start;
+            while(last.next!=null) {
+                last = last.next;
+            }
+            this.tail = last;
+
+
+
+        }
+
+    }
+
     public void peakLast() {
         if (tail != null) {
             System.out.println(this.tail.data);
         } else {
             System.out.println("List is empty.");
         }
+    }
+
+    public void peakFirst(){
+        if (head != null) {
+            System.out.println(this.head.data);
+        } else {
+            System.out.println("List is empty.");
+        }
+
     }
 }
