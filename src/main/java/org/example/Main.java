@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
        MergeSort mergeSort = new MergeSort();
 
-       int[] arr = {3,6,8,9,6,7,9,10,1,12};
+       int[] arr = {3,6,12,8,9,7,1,9,10,12,32};
 
 
         System.out.println(Arrays.toString(mergeSort.SortArray(arr)));

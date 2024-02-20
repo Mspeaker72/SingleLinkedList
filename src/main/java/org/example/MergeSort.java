@@ -16,8 +16,15 @@ public class MergeSort {
         if (arr.length <= 1) {
             return arr;
         }
+
+        if(verifyOrder(arr,0)){
+            return arr;
+        }
+
         int[] left = SortArray(splitLeft(arr));
         int[] right = SortArray(splitright(arr));
+
+
 
         return combine(left, right);
     }
@@ -115,4 +122,3 @@ public class MergeSort {
         return left;
     }
 }
-
