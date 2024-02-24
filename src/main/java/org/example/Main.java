@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
       SelectionSort selectionSort = new SelectionSort();
 
-       int[] arr = {72,1,1,1,2,10,3,6,5,1};
+       int[] arr = {72,1,1,1,2,10,6,3,6,5,1,2};
 
 
 

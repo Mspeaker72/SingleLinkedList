@@ -30,8 +30,9 @@ public class SelectionSort {
 
             arr = rebuild(arr,min);
         }
+        arr =  newArr;
 
-       return newArr;
+       return arr;
     }
 
     private int[] rebuild(int[] arr, int min) {
