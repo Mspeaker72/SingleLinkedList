@@ -7,12 +7,15 @@ public class Main {
 
 
     public static void main(String[] args) {
-       MergeSort mergeSort = new MergeSort();
+      SelectionSort selectionSort = new SelectionSort();
 
-       int[] arr = {3,6,12,8,9,7,1,9,10,12,32};
+       int[] arr = {72,1,1,1,2,10,3,6,5,1};
 
 
-        System.out.println(Arrays.toString(mergeSort.SortArray(arr)));
+
+        System.out.println(Arrays.toString(selectionSort.selectSort(arr)));
+
+
 
     }
 }
