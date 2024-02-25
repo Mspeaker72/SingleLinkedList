@@ -7,13 +7,19 @@ public class Main {
 
 
     public static void main(String[] args) {
-      SelectionSort selectionSort = new SelectionSort();
+      QuickSort quickSort = new QuickSort();
+      MergeSort mergeSort = new MergeSort();
 
-       int[] arr = {72,1,1,1,2,10,6,3,6,5,1,2};
+       int[] arr = {1,3,7,2,5,8,4};
+      quickSort.quicksort(arr,0,arr.length-1);
 
 
 
-        System.out.println(Arrays.toString(selectionSort.selectSort(arr)));
+
+
+
+
+
 
 
 
